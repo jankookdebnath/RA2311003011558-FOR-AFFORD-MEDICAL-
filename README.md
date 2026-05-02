@@ -1,52 +1,51 @@
-# 🚀 Priority Inbox System
+# Notification Priority Management System
 
-A sophisticated notification management system designed to filter, prioritize, and display critical academic and placement alerts using a custom weight-based algorithm and a modern React-based dashboard.
+An enterprise-grade solution designed for the systematic prioritisation and management of academic and corporate notifications. This system employs a sophisticated weighting algorithm to ensure critical communications are presented with appropriate prominence within a modern web-based interface.
 
-## 📖 Project Overview
-This project was developed to solve the problem of "notification fatigue." In a busy academic environment, students often miss critical placement offers or exam results because they are buried under general event updates. Our system ensures that the most important information always stays at the top.
+## Project Summary
+The primary objective of this project is to mitigate information overload within academic environments. By categorising incoming data streams, the system ensures that high-stakes information—such as career placements and formal examination results—is never obscured by routine administrative updates.
 
-## 🛠️ Tech Stack & Language
-- **Language:** JavaScript (ES6+)
-- **Frontend Framework:** Next.js 14 (React)
-- **UI Library:** Material UI (MUI)
-- **Backend/Scripting:** Node.js
-- **API Communication:** Axios
+## Technical Specifications
+- **Core Language:** JavaScript (ECMAScript 2023)
+- **Frontend Architecture:** Next.js 14 (React Framework)
+- **Design System:** Material UI (MUI) 
+- **Server-Side Runtime:** Node.js
+- **Network Protocol:** Axios-based REST API integration
 
-## 🧠 How We Did It: The Logic
-We implemented a **Two-Stage Architecture**:
+## Methodological Approach
+The implementation follows a two-tier architectural pattern:
 
-1.  **Stage 1 (Algorithm):** A standalone Node.js script that connects to the Afford Medical evaluation server. It fetches raw notification data and applies a **Priority Weighting Algorithm**:
-    - **Placement Offers (Weight 3):** Highest priority.
-    - **Exam Results (Weight 2):** Medium priority.
-    - **General Events (Weight 1):** Low priority.
-    - *Secondary Sort:* For items with the same weight, the most recent timestamp takes precedence.
+1.  **Stage 1: Algorithmic Prioritisation**
+    A bespoke Node.js integration script handles the ingestion of data from the evaluation server. It applies a deterministic sorting logic based on predefined priority indices:
+    - **Tier 1 (Placement):** Weighted at index 3 (Highest).
+    - **Tier 2 (Result):** Weighted at index 2 (Intermediate).
+    - **Tier 3 (Event):** Weighted at index 1 (Standard).
+    - *Temporal Sorting:* A secondary chronometric sort is applied to ensure that the most contemporary data within each tier is prioritised.
 
-2.  **Stage 2 (Frontend):** A high-performance Next.js dashboard that visualizes this data. We implemented "Client-Side Hydration" to ensure the UI remains snappy while handling large volumes of notifications.
+2.  **Stage 2: Frontend Visualisation**
+    The user interface is constructed using Next.js to facilitate efficient rendering. The system utilises client-side state management to maintain a responsive user experience while processing complex data sets.
 
-## ⚖️ Why We Chose This Stack (and why not others)
+## Strategic Selection of Technology
 
-### Why Next.js instead of Create React App (CRA)?
-- **Performance:** Next.js uses Server-Side Rendering (SSR) and optimized bundling. CRA is now deprecated and lacks the built-in routing and performance optimizations required for modern web apps.
-- **App Router:** We used the new Next.js 13+ App Router for better layout management and faster transitions.
+### The Rationale for Next.js
+In contrast to standard React applications, Next.js provides superior performance through advanced bundling and routing optimisations. The choice of the App Router architecture ensures a modular codebase that supports future scalability and robust server-side integration.
 
-### Why Material UI (MUI) instead of Vanilla CSS or Tailwind?
-- **Professionalism:** MUI provides a "Premium" enterprise feel right out of the box. While Tailwind is great for custom designs, MUI ensures accessibility (A11y) and a consistent design language (Material Design) that is widely recognized in professional software.
-- **Development Speed:** High-quality components like Data Tables, Snackbars, and Filter chips are pre-built, allowing us to focus on the **algorithm** rather than reinventing the wheel for basic UI elements.
+### Material UI (MUI) vs. Alternative Styling Solutions
+While utility-first frameworks such as Tailwind offer flexibility, Material UI was selected for its adherence to established design principles and superior component accessibility. This ensures a professional, standardised aesthetic that aligns with corporate software expectations, whilst significantly reducing development latency for complex UI elements.
 
-### Why Node.js for the Algorithm?
-- **Unified Language:** Using JavaScript for both the frontend and backend simplifies the codebase and allows for shared logic/types.
-- **Non-blocking I/O:** Node.js is exceptionally fast at handling API requests, which is critical when fetching and processing large notification sets.
+### Node.js for Backend Operations
+Node.js was selected as the preferred runtime environment to maintain a unified language stack across the application. Its asynchronous, non-blocking architecture is particularly well-suited for high-concurrency API operations and efficient data processing.
 
 ---
 
-## 🚀 How to Run the Project
+## Deployment and Execution Instructions
 
 ### Prerequisites
-- Node.js installed on your machine.
-- An active `ACCESS_TOKEN` for the evaluation server.
+- Node.js Runtime Environment
+- Valid Evaluation Server Access Credentials
 
-### 1. Setup
-Navigate to the project folder and install dependencies:
+### Initial Configuration
+Execute the following commands within the terminal to initialise the environment:
 ```powershell
 cd notification-priority-system
 npm install
@@ -54,23 +53,24 @@ cd frontend
 npm install
 ```
 
-### 2. Run the Priority Algorithm (Backend)
-Navigate back to the `notification-priority-system` folder and run:
+### Execution of the Prioritisation Algorithm
+To ingest and process notification data, navigate to the root directory and execute:
 ```powershell
-# Set your token
+# Assign the authorisation token
 $env:ACCESS_TOKEN="your_token_here"
 
-# Run the fetcher
+# Execute the processing script
 node src/stage1-priority-algorithm.js
 ```
 
-### 3. Start the Dashboard (Frontend)
-Navigate to the `frontend` folder and run:
+### Initialisation of the Web Interface
+To launch the development server for the frontend dashboard:
 ```powershell
+cd frontend
 npm run dev
 ```
-Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+The application will be accessible via the local loopback address: **[http://localhost:3000](http://localhost:3000)**
 
 ---
-**Developed by:** Janhavi Debnath
-**Roll No:** RA2311003011558
+**Principal Developer:** Janhavi Debnath  
+**Candidate Identifier:** RA2311003011558
