@@ -62,6 +62,16 @@ $env:ACCESS_TOKEN="your_token_here"
 # Execute the processing script
 node src/stage1-priority-algorithm.js
 ```
+### pic of the web site 
+<img width="1917" height="844" alt="image" src="https://github.com/user-attachments/assets/595c0425-fe26-45c7-bda4-19cf21e54328" />
+<img width="1911" height="842" alt="image" src="https://github.com/user-attachments/assets/e5e41caf-5f0e-42b9-a2cb-4c495a50dd74" />
+<img width="1906" height="847" alt="image" src="https://github.com/user-attachments/assets/0e372350-1dbd-4bf6-a2d6-377ee3d8b1b1" />
+<img width="1903" height="714" alt="image" src="https://github.com/user-attachments/assets/e4bef7ae-e9c4-4573-98cf-be81162b16ed" />
+
+
+
+
+
 
 ### Initialisation of the Web Interface
 To launch the development server for the frontend dashboard:
